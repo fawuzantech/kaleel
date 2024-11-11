@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                 The Golden Standard For Gold Distribution
             </h1>
             <p className="lead mb-4">
-                Experience the finest luxury goods, It's your time to shine.
+                Experience the finest luxury goods, Its your time to shine.
             </p>
            <Link 
                 href="/explore" 

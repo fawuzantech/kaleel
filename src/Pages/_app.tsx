@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     // Import Bootstrap JS on the client side only
     if (typeof window !== 'undefined') {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       require('bootstrap/dist/js/bootstrap.bundle.min.js');
     }
   }, []);

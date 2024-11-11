@@ -1,7 +1,5 @@
-// @ts-nocheck
 'use client'
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Registration from './Registration'
 import TwoFactorCode from './twoFactorCode'
 import EmailVerification from './emailVerification'

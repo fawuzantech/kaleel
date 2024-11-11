@@ -1,17 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
-import {  nextStep } from '@/store/reducers/registrationReducer';
 import { TextField, Button, Box, Typography, Container } from '@mui/material';
 
 const EmailVerification = () => {
     const [code, setCode] = useState('');
     const [isValid, setIsValid] = useState(false);
-    const dispatch = useDispatch();
-    const router = useRouter();
-    const registration = useSelector((state: RootState) => state.registration);
+
 
     useEffect(() => {
         setIsValid(code.length === 6 && /^\d+$/.test(code));

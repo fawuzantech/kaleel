@@ -1,18 +1,16 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import axios from 'axios';
-import { setTwoFactorCode, setFirstName, setLastName, setPhone, setEmail, setPassword, setConfirmPassword, nextStep, previousStep, setComplete, resetForm } from '@/store/reducers/registrationReducer';
+import { setTwoFactorCode,nextStep  } from '@/store/reducers/registrationReducer';
 import { TextField, Button, Box, Typography, Container } from '@mui/material';
 
 const TwoFactorCode = () => {
     const [code, setCode] = useState('');
     const [isValid, setIsValid] = useState(false);
     const dispatch = useDispatch();
-    const router = useRouter();
-    const { firstName, lastName, phone, email, password, confirmPassword, twoFactorCode, currentStep, isComplete } = useSelector((state: RootState) => state.registration);
+    const { firstName, lastName, phone, email, password} = useSelector((state: RootState) => state.registration);
 
     useEffect(() => {
         setIsValid(code.length === 6 && /^\d+$/.test(code));
@@ -50,8 +48,10 @@ const TwoFactorCode = () => {
                 dispatch(nextStep());
             }
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
-            console.error('Two-factor verification failed:', error.message);
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            console.error('Two-factor verification failed:', error.message );
             alert('Two-factor verification failed. Please try again.');
         }
     };

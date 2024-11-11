@@ -26,7 +26,7 @@ const Registration = () => {
         confirmPassword: ''
     });
 
-    const { firstName, lastName, phone, email, password, confirmPassword, currentStep } = registration;
+    const { firstName, lastName, phone, email, password, confirmPassword, } = registration;
 
     const validateForm = () => {
         const newErrors: typeof errors = {

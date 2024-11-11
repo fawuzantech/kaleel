@@ -60,7 +60,7 @@
           setComplete: (state) => {
               state.isComplete = true;
           },
-          resetForm: (state) => {
+          resetForm: () => {
               return initialState;
           }
       }

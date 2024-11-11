@@ -3,7 +3,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
-import { Card } from 'react-bootstrap'
+import ProductCard from './ProductCard';
 
 const ProductList: React.FC = () => {
   const products = useSelector((state: RootState) => state.products.products);
