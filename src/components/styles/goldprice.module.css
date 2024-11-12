@@ -1,0 +1,21 @@
+/* global.css or GoldPrice.module.css */
+
+.gold-price {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.gold-price h2 {
+    font-size: 1.75rem;
+}
+
+.gold-price .input-group .form-control {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 8px;
+}
+
+.gold-price button {
+    font-size: 1rem;
+    border-radius: 8px;
+}
